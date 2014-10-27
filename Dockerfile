@@ -2,11 +2,15 @@
 
 FROM centos:centos7
 MAINTAINER Michael Klatskin <michael.ecompositor.com>
+RUN  yum install -y epel-release
 RUN  yum update -y && yum install -y \
   git \
   unzip \
   tar \
-  wget 
+  wget \
+  httpie \
+  nodejs \
+  npm
 
 #versions
 ENV JDK_RPM jdk-7u67-linux-x64.rpm
